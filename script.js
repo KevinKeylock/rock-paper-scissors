@@ -1,13 +1,23 @@
 function getComputerChoice (){
+  //Square brackets for strings
     let answers = [
-        "Rock",
-        "Paper",
-        "Scissors"
+        "rock",
+        "paper",
+        "scissors"
       ]
       
-      let randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+      let computerSelection = answers[Math.floor(Math.random() * answers.length)];
       
-      console.log(randomAnswer);
+      console.log(computerSelection);
     }
 
 getComputerChoice()
+
+function getPlayerSelection(){
+let playerSelection = prompt('Weapon of choice? Rock, Paper or Scissors').toLowerCase();
+console.log(playerSelection);
+}
+
+getPlayerSelection()
+
+
