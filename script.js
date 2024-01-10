@@ -23,4 +23,28 @@ function getComputerChoice (){
 const computerSelection = getComputerChoice()
 console.log(computerSelection)
 
+function fight() {
+  if (playerSelection.includes("rock")  && (computerSelection.includes("scissors"))){
+    console.log("You win! Rock beats Scissors!")}
+  else if (playerSelection.includes("rock")  && (computerSelection.includes("rock"))){
+    console.log("You draw!")}
+  else if (playerSelection.includes("rock")  && (computerSelection.includes("paper"))){
+    console.log("You lose! Paper beats Rock!")}
+  else if (playerSelection.includes("paper")  && (computerSelection.includes("scissors"))){
+    console.log("You lose! Scissors beats Paper!")}
+  else if (playerSelection.includes("paper")  && (computerSelection.includes("paper"))){
+    console.log("You draw!")}
+  else if (playerSelection.includes("paper")  && (computerSelection.includes("rock"))){
+    console.log("You win! Paper beats Rock!")}
+  else if (playerSelection.includes("scissors")  && (computerSelection.includes("scissors"))){
+    console.log("You Draw!")}
+  else if (playerSelection.includes("scissors")  && (computerSelection.includes("rock"))){
+    console.log("You Lose! Rock beats Scissors!")}
+  else if (playerSelection.includes("scissors")  && (computerSelection.includes("paper"))){
+    console.log("You Win! Scissors beats Paper!")}
+  else {
+  alert("Please choose either Rock, Paper or Scissors")
+  }
+}
 
+fight()
