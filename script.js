@@ -4,29 +4,25 @@ function getPlayerSelection(){
   return playerSelection;
 }
 
-const playerSelection = getPlayerSelection()
-console.log(playerSelection);
-
-function getComputerChoice (){
+function getComputerSelection (){
   //Square brackets for strings
     let answers = [
         "rock",
         "paper",
         "scissors"
       ]
-      
       let computerSelection = answers[Math.floor(Math.random() * answers.length)];
-      
       return computerSelection;
     }
-
-const computerSelection = getComputerChoice()
-console.log(computerSelection)
 
 let playerScore = 0
 let computerScore = 0
 
 function fight() {
+  let playerSelection = getPlayerSelection()
+  console.log(playerSelection);
+  let computerSelection = getComputerSelection()
+  console.log(computerSelection)
   if (playerSelection.includes("rock")  && (computerSelection.includes("scissors"))){
     alert("You win! Rock beats Scissors")
     playerScore ++
@@ -65,5 +61,12 @@ function fight() {
   }
 }
 
+function game(){
 fight()
+fight()
+fight()
+fight()
+fight()
+}
 
+game()
