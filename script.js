@@ -22,7 +22,7 @@ function fight() {
   let playerSelection = getPlayerSelection()
   console.log(playerSelection);
   let computerSelection = getComputerSelection()
-  console.log(computerSelection)
+  console.log(computerSelection);
   if (playerSelection.includes("rock")  && (computerSelection.includes("scissors"))){
     alert("You win! Rock beats Scissors")
     playerScore ++
@@ -68,13 +68,13 @@ fight()
 fight()
 fight()
 if (playerScore > computerScore){
-  console.log("You Win!")
+  alert("You Win!")
 }
 else if (playerScore < computerScore) {
-  console.log("You Lose!")
+  alert("You Lose!")
 }
 else{
-  console.log("It's a draw!")
+  alert("It's a draw!")
 }
 }
 
