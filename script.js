@@ -67,6 +67,15 @@ fight()
 fight()
 fight()
 fight()
+if (playerScore > computerScore){
+  console.log("You Win!")
+}
+else if (playerScore < computerScore) {
+  console.log("You Lose!")
+}
+else{
+  console.log("It's a draw!")
+}
 }
 
 game()
