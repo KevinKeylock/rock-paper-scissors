@@ -27,16 +27,13 @@ let playerScore = 0
 let computerScore = 0
 
 function fight(playerSelection) {
-  console.log(playerSelection);
   const computerSelection = getComputerSelection()
-  console.log(computerSelection);
   const result = document.querySelector('#result')
   const score = document.querySelector('#score')
 
   if (playerSelection.includes("rock")  && (computerSelection.includes("scissors"))){
     result.textContent = "You win! Rock beats Scissors";
     playerScore ++
-    //score.textContent = "Player has", playerScore + " computer has", computerScore"
   }
   else if (playerSelection.includes("rock")  && (computerSelection.includes("rock"))){
     result.textContent = "You draw!";
@@ -67,9 +64,19 @@ function fight(playerSelection) {
     result.textContent = "You Win! Scissors beats Paper"
     playerScore ++
    }
-    
+  
     player.textContent = playerScore
     computer.textContent = computerScore
-    console.log ("Player has", playerScore + " computer has", computerScore)
+
+if (playerScore === 5){
+  alert("You Win!")
+  location.reload()
 }
+if (computerScore === 5){
+  alert("You Lose!");
+  location.reload();
+}
+
+}
+
 
