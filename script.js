@@ -1,25 +1,19 @@
-/*function getPlayerSelection(){  
-  let playerSelection = prompt('Weapon of choice? Rock, Paper or Scissors').toLowerCase();  
- 
-  return playerSelection;
-}*/
 const rock = document.querySelector('#rock');
-rock.addEventListener('click', () => {
-  console.log("Rock");
+  rock.addEventListener('click', () => {
+  fight ("rock");
 })
 
 const paper = document.querySelector('#paper');
 paper.addEventListener('click', () => {
-  console.log("Paper");
+  fight ("paper");
 })
 
 const scissors = document.querySelector('#scissors');
-scissors.addEventListener('click', () => {
-  console.log("Scissors");
+  scissors.addEventListener('click', () => {
+  fight ("scissors");
 })
 
-/*function getComputerSelection (){
-  //Square brackets for strings
+function getComputerSelection (){
     let answers = [
         "rock",
         "paper",
@@ -27,70 +21,55 @@ scissors.addEventListener('click', () => {
       ]
       let computerSelection = answers[Math.floor(Math.random() * answers.length)];
       return computerSelection;
-    }
+}
 
 let playerScore = 0
 let computerScore = 0
 
-function fight() {
-  let playerSelection = getPlayerSelection()
+function fight(playerSelection) {
   console.log(playerSelection);
-  let computerSelection = getComputerSelection()
+  const computerSelection = getComputerSelection()
   console.log(computerSelection);
+  const result = document.querySelector('#result')
+  const score = document.querySelector('#score')
+
   if (playerSelection.includes("rock")  && (computerSelection.includes("scissors"))){
-    alert("You win! Rock beats Scissors")
+    result.textContent = "You win! Rock beats Scissors";
     playerScore ++
-    console.log ("Player has", playerScore + " computer has", computerScore)}
-  else if (playerSelection.includes("rock")  && (computerSelection.includes("rock"))){
-    alert("You draw!")
-    console.log ("Player has", playerScore + " computer has", computerScore)}
-  else if (playerSelection.includes("rock")  && (computerSelection.includes("paper"))){
-    alert("You lose! Paper beats Rock")
-    computerScore ++
-    console.log ("Player has", playerScore + " computer has", computerScore) }
-  else if (playerSelection.includes("paper")  && (computerSelection.includes("scissors"))){
-    alert("You lose! Scissors beats Paper")
-    computerScore ++
-    console.log ("Player has", playerScore + " computer has", computerScore)}
-  else if (playerSelection.includes("paper")  && (computerSelection.includes("paper"))){
-    alert("You draw!")
-    console.log ("Player has", playerScore + " computer has", computerScore)}
-  else if (playerSelection.includes("paper")  && (computerSelection.includes("rock"))){
-    alert("You win! Paper beats Rock")
-    playerScore ++
-    console.log ("Player has", playerScore + " computer has", computerScore)}
-  else if (playerSelection.includes("scissors")  && (computerSelection.includes("scissors"))){
-    alert("You Draw!")
-    console.log ("Player has", playerScore + " computer has", computerScore)}
-  else if (playerSelection.includes("scissors")  && (computerSelection.includes("rock"))){
-    alert("You Lose! Rock beats Scissors")
-    computerScore ++
-    console.log ("Player has", playerScore + " computer has", computerScore)}
-  else if (playerSelection.includes("scissors")  && (computerSelection.includes("paper"))){
-    alert("You Win! Scissors beats Paper")
-    playerScore ++
-    console.log ("Player has", playerScore + " computer has", computerScore)}
-  else {
-  alert("Please choose either Rock, Paper or Scissors")
+    //score.textContent = "Player has", playerScore + " computer has", computerScore"
   }
+  else if (playerSelection.includes("rock")  && (computerSelection.includes("rock"))){
+    result.textContent = "You draw!";
+    }
+  else if (playerSelection.includes("rock")  && (computerSelection.includes("paper"))){
+    result.textContent = "You lose! Paper beats Rock"
+    computerScore ++
+    }
+  else if (playerSelection.includes("paper")  && (computerSelection.includes("scissors"))){
+    result.textContent = "You lose! Scissors beats Paper"
+    computerScore ++
+ }
+  else if (playerSelection.includes("paper")  && (computerSelection.includes("paper"))){
+    result.textContent = "You draw!"
+ }
+  else if (playerSelection.includes("paper")  && (computerSelection.includes("rock"))){
+    result.textContent = "You win! Paper beats Rock"
+    playerScore ++
+ }
+  else if (playerSelection.includes("scissors")  && (computerSelection.includes("scissors"))){
+    result.textContent = "You Draw!"
+  }
+  else if (playerSelection.includes("scissors")  && (computerSelection.includes("rock"))){
+    result.textContent = "You Lose! Rock beats Scissors"
+    computerScore ++
+ }
+  else if(playerSelection.includes("scissors")  && (computerSelection.includes("paper"))){
+    result.textContent = "You Win! Scissors beats Paper"
+    playerScore ++
+   }
+    
+    player.textContent = playerScore
+    computer.textContent = computerScore
+    console.log ("Player has", playerScore + " computer has", computerScore)
 }
 
-function game(){
-fight()
-fight()
-fight()
-fight()
-fight()
-if (playerScore > computerScore){
-  alert("You Win!")
-}
-else if (playerScore < computerScore) {
-  alert("You Lose!")
-}
-else{
-  alert("It's a draw!")
-}
-}
-
-//game()
-*/
