@@ -1,10 +1,24 @@
-function getPlayerSelection(){  
+/*function getPlayerSelection(){  
   let playerSelection = prompt('Weapon of choice? Rock, Paper or Scissors').toLowerCase();  
  
   return playerSelection;
-}
+}*/
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+  console.log("Rock");
+})
 
-function getComputerSelection (){
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+  console.log("Paper");
+})
+
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => {
+  console.log("Scissors");
+})
+
+/*function getComputerSelection (){
   //Square brackets for strings
     let answers = [
         "rock",
@@ -79,3 +93,4 @@ else{
 }
 
 //game()
+*/
