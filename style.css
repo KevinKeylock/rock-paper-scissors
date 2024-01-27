@@ -1,12 +1,12 @@
 
 
 body {
-  align-items: center;
-  justify-content: space-around;
-
+  background-color: rgb(236, 230, 226);
 
 }
 .buttons{
+  padding-top: 100px;
+  align-items: center;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -16,4 +16,21 @@ body {
 
 button {
     background-color: white;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.scores {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
