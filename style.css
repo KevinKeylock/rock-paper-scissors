@@ -1,11 +1,17 @@
-
 body {
-  background-color: rgb(54, 54, 54);
+  /*background-image: url("images/black.jpg");
+  background-size: cover;*/
   margin: 0;
   padding: 0;
+  background-color: rgb(58, 56, 56);
 
 }
 
+.main{
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+}
 #header{
   text-align: center;
   color: white;
@@ -16,54 +22,46 @@ body {
   margin: 0;
 }
 
-
-
 .buttons{
-  padding-top: 100px;
+  
   align-items: center;
   display: flex;
   flex-direction: row;
   gap: 20px;
   justify-content: center;
-  
-  
-}
+  }
 
 button {
-    background-color: white;
-    border-radius: 5px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 #result {
   display: flex;
   justify-content: center;
-    padding-top: 20px;
-    font-size: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: aliceblue;
+  padding-top: 20px;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: aliceblue;
 }
 
 .scores {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding-top: 20px;
-    font-size: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: aliceblue;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: aliceblue;
 } 
 
 #footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(31, 31, 31);
-    color: white;
-    text-align: center;
-    padding: 5px 0 5px 0;
-}
-
-.main{
-
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  text-align: center;
+  padding: 5px 0 5px 0;
 }
